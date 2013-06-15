@@ -10,6 +10,11 @@ public class TesteCotacaoResource {
 		WebResource resource = client.resource("http://localhost:9090/cotacao/DollarToReal");
 		String cotacao = resource.get(String.class);
 		System.out.println(cotacao);
+		
+		resource = client.resource("http://localhost:9090/Daniel/Patrocinio");
+		System.out.println(resource.get(String.class));
+		
+		
 	 }
 	
 }

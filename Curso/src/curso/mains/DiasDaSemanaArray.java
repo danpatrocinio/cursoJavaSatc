@@ -2,6 +2,7 @@ package curso.mains;
 
 public class DiasDaSemanaArray {
 
+	
 	/**
 	 * arrays
 	 */
@@ -32,6 +33,9 @@ public class DiasDaSemanaArray {
 		for (String dia : dias) {
 			System.out.print(String.format("%s ", dia));
 		}
+		
 	}
+	
+	
 
 }
