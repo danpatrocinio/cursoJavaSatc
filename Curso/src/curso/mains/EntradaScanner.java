@@ -1,4 +1,4 @@
-package curso.main;
+package curso.mains;
 
 import java.util.Scanner;
 

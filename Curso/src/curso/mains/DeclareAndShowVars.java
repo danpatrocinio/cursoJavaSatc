@@ -1,5 +1,5 @@
 
-package curso.main;
+package curso.mains;
 
 public class DeclareAndShowVars {
 	
