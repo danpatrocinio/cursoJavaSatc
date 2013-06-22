@@ -1,24 +1,44 @@
 package banco;
 
+import java.util.Date;
+
 public class Programa {
 
 	public static void main(String[] args) {
-		Conta conta1 = new Conta();
-		conta1.dono = "João";
-		conta1.saldo = 1000.0;
 
-		Conta conta2 = new Conta();
-		conta2.dono = "Maria";
-		conta2.saldo = 0.0;
-
-		if (conta1.transfere(conta2, 100.00)) {
-			System.out.println("Transferido com sucesso!");
-		} else {
-			System.out.println("Não tem saldo!");
-		}
+		Funcionario f1 = new Funcionario();
+		f1.nome = "Hugo";
+		f1.salario = 100.0;
+		f1.dataEntrada = new Date();
+		f1.recebeAumento(50.0);
+//		f1.mostra();
 		
-		System.out.println(conta1.dono + " tem " + conta1.saldo);
-		System.out.println(conta2.dono + " tem " + conta2.saldo);
+		Funcionario f2 = new Funcionario();
+		f2.nome = "Hugo";
+		f2.salario = 100.0;
+		f2.recebeAumento(50.0);
+//		f2.mostra();
+		
+//		compara(f1, f2);
+		
+		f2 = f1;
+		
+		f1.nome = "f1";
+		f2.mostra();
+
+		compara(f1, f2);
+		
+		f2.nome = "f2";
+		
+		compara(f1, f2);
+	}
+	
+	static void compara(Funcionario f1, Funcionario f2) {
+		if (f1 == f2) {
+			System.out.println("\niguais");
+		} else {
+			System.out.println("\ndiferentes");
+		}
 	}
 
 }
