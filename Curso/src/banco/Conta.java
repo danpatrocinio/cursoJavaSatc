@@ -20,9 +20,12 @@ public class Conta {
 	}
 	
 	
-	void transfere(Conta contaDestino, Double valor){
-		contaDestino.saldo += valor;
-		saldo -= valor;
+	boolean transfere(Conta contaDestino, Double valor){
+		if (saca(valor)) {
+			contaDestino.saldo += valor;
+			return true;
+		}
+		return false;
 	}
 	
 }
