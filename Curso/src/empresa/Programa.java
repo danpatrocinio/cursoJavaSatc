@@ -1,6 +1,7 @@
-package banco;
+package empresa;
 
-import java.util.Date;
+import empresa.Data;
+
 
 public class Programa {
 
@@ -9,7 +10,7 @@ public class Programa {
 		Funcionario f1 = new Funcionario();
 		f1.nome = "Hugo";
 		f1.salario = 100.0;
-		f1.dataEntrada = new Date();
+		f1.dataEntrada = new Data(16,7,2012);
 		f1.recebeAumento(50.0);
 //		f1.mostra();
 		

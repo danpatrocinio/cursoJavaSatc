@@ -1,13 +1,11 @@
-package banco;
-
-import java.util.Date;
+package empresa;
 
 public class Funcionario {
 
 	String nome;
 	String departamento;
 	Double salario;
-	Date dataEntrada;
+	Data dataEntrada;
 	String rg;
 	
 	void recebeAumento(Double valorAumento){
@@ -25,6 +23,7 @@ public class Funcionario {
 				"\n\tSalario: %s " +
 				"\n\tData de entrada: %s " +
 				"\n\tRG: %s" +
-				"\n\tGanho anual: %s", nome, departamento, salario, dataEntrada, rg, calculaGanhoAnual()));
+				"\n\tGanho anual: %s", nome, departamento, salario, dataEntrada.mostra(), rg, calculaGanhoAnual()));
 	}
+	
 }
