@@ -7,10 +7,6 @@ public class Empresa {
 	String nome;
 	Funcionario[] funcionarios = new Funcionario[bloco];
 	
-	void mostra(){
-		System.out.println(String.format("CNPJ: %s - %s", cnpj, nome));
-	}
-	
 	void adiciona(Funcionario f){
 		Integer vaga = vagaEmAberto();
 		if (vaga != null) 
@@ -36,6 +32,10 @@ public class Empresa {
 			novoBloco[i] = funcionarios[i];
 		}
 		funcionarios = novoBloco;
+	}
+	
+	void mostra(){
+		System.out.println(String.format("CNPJ: %s - %s", cnpj, nome));
 	}
 	
 	void mostraFuncionarios(){
