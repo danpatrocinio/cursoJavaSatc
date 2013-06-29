@@ -23,7 +23,7 @@ public class Funcionario {
 				"\n\tSalario: %s " +
 				"\n\tData de entrada: %s " +
 				"\n\tRG: %s" +
-				"\n\tGanho anual: %s", nome, departamento, salario, dataEntrada.mostra(), rg, calculaGanhoAnual()));
+				"\n\tGanho anual: %s", nome, departamento, salario, dataEntrada!=null ? dataEntrada.mostra() : "", rg, calculaGanhoAnual()));
 	}
 	
 }
