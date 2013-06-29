@@ -38,6 +38,15 @@ public class Empresa {
 		System.out.println(String.format("CNPJ: %s - %s", cnpj, nome));
 	}
 	
+	boolean contem(Funcionario f){
+		for (Funcionario funcionario : funcionarios) {
+			if (f.equals(funcionario)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	void mostraFuncionarios(){
 		for (Funcionario f : funcionarios) {
 			if (f!=null) {
