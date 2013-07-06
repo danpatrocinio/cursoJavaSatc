@@ -1,5 +1,8 @@
 package curso.mains;
 
+import java.io.IOException;
+import java.util.Properties;
+
 public class Maior {
 
 	public static void main(String[] args) {
@@ -19,6 +22,15 @@ public class Maior {
 			}
 		}
 		System.out.println("O maior número é " + maior);
+		Properties p = new Properties();
+		p.put("prop1", "Propriedade 1");
+		p.put("prop2", "Propriedade 2");
+		p.put("prop3", "Propriedade 3");
+		try {
+			p.store(System.out , "Comentario");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -3,9 +3,9 @@ package empresa;
 public class Empresa {
 
 	static int bloco = 10;
-	String cnpj;
-	String nome;
-	Funcionario[] funcionarios = new Funcionario[bloco];
+	private String cnpj;
+	private String nome;
+	private Funcionario[] funcionarios = new Funcionario[bloco];
 	
 	void adiciona(Funcionario f){
 		Integer vaga = vagaEmAberto();
@@ -34,6 +34,22 @@ public class Empresa {
 		funcionarios = novoBloco;
 	}
 	
+	public String getCnpj() {
+		return cnpj;
+	}
+
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
 	void mostra(){
 		System.out.println(String.format("CNPJ: %s - %s", cnpj, nome));
 	}
@@ -45,6 +61,10 @@ public class Empresa {
 			}
 		}
 		return false;
+	}
+	
+	public Funcionario getFuncionario(int posicao){
+		return this.funcionarios[posicao];
 	}
 	
 	void mostraFuncionarios(){

@@ -7,16 +7,11 @@ public class Programa {
 
 	public static void main(String[] args) {
 
-		Funcionario f1 = new Funcionario();
-		f1.nome = "Hugo";
-		f1.salario = 100.0;
-		f1.dataEntrada = new Data(16,7,2012);
+		Funcionario f1 = new Funcionario("Hugo",new Data(16,7,2012), 100.0);
 		f1.recebeAumento(50.0);
 //		f1.mostra();
 		
-		Funcionario f2 = new Funcionario();
-		f2.nome = "Hugo";
-		f2.salario = 100.0;
+		Funcionario f2 = new Funcionario("Hugo",new Data(16,7,2012), 100.0);
 		f2.recebeAumento(50.0);
 //		f2.mostra();
 		
@@ -24,12 +19,12 @@ public class Programa {
 		
 		f2 = f1;
 		
-		f1.nome = "f1";
+		f1.setNome("f1");
 		f2.mostra();
 
 		compara(f1, f2);
 		
-		f2.nome = "f2";
+		f2.setNome("f2");
 		
 		compara(f1, f2);
 	}
