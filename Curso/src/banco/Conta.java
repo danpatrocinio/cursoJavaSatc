@@ -1,6 +1,6 @@
 package banco;
 
-public class Conta {
+public class Conta implements Comparable<Conta>{
 
 	Integer numero;
 	String dono;
@@ -15,6 +15,14 @@ public class Conta {
 		return false;
 	}
 	
+	public Integer getNumero() {
+		return numero;
+	}
+
+	public void setNumero(Integer numero) {
+		this.numero = numero;
+	}
+
 	void deposita(Double valor){
 		saldo += valor;
 	}
@@ -26,6 +34,21 @@ public class Conta {
 			return true;
 		}
 		return false;
+	}
+
+	@Override
+	public int compareTo(Conta c) {
+//		if (c==null && this != null) {
+//			return -1;
+//		}
+//		if (this==null && c!=null) {
+//			return 1;
+//		}
+//		if (c==null && this ==null) {
+//			return 0;
+//		}
+		
+		return this.getNumero().compareTo(c.getNumero());
 	}
 	
 }
